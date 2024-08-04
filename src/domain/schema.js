@@ -11,7 +11,15 @@ const loginSchema = Joi.object({
 	password: Joi.string().required(),
 });
 
+const wordSchema = Joi.object({
+	words: Joi.string().required(),
+	kataDasar: Joi.string().required(),
+	prefix: Joi.string().optional(),
+	suffix: Joi.string().optional(),
+});
+
 module.exports = {
 	registerSchema,
 	loginSchema,
+	wordSchema,
 };
